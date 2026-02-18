@@ -1,0 +1,2072 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PT. AGAPE OLIVIA SUKSES - Spesialis Heater Industri</title>
+    <meta name="description" content="Spesialis Heater Element & Sistem Pemanas Industri terbaik dan terpercaya.">
+
+    <!-- Font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ========== CSS VARIABLES ========== */
+        :root {
+            /* Brand Colors */
+            --primary-color: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary-color: #1f2937;
+            --accent-color: #f59e0b;
+            --red-logo: #dc2626;
+            --black-logo: #180082;
+
+            /* Netral & Background */
+            --bg-light: #f8fafc;
+            --bg-white: #ffffff;
+            --bg-dark: #0a0a0f;
+            --text-dark: #111827;
+            --text-gray: #4b5563;
+            --text-muted: #6b6b7a;
+            --border-color: #e5e7eb;
+            --card-bg: #15151f;
+
+            /* Efek */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --radius: 12px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+            /* Slider specific */
+            --slider-accent: #000000;
+            --slider-accent-glow: rgba(0, 212, 170, 0.4);
+        }
+
+        /* ========== RESET & BASE ========== */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        h1, h2, h3, h4, p {
+            margin-top: 0;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        .font-display {
+            font-family: 'Syne', sans-serif;
+        }
+
+        /* ========== ANIMATION UTILITIES ========== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes fadeSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-entrance {
+            animation: fadeSlideUp 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+            opacity: 0;
+        }
+
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+
+        /* ========== HEADER & NAVIGATION ========== */
+        header {
+            background-color: var(--bg-white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .header-top {
+            max-width: 1200px;
+            margin: auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            cursor: pointer;
+        }
+
+        .brand-img {
+            max-height: 70px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .brand-logo-text {
+            font-size: 1.9rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            line-height: 1.1;
+            letter-spacing: -0.5px;
+        }
+
+        .brand-tagline {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .txt-black { color: var(--black-logo); }
+        .txt-blue { color: var(--primary-color); }
+        .txt-red { color: var(--red-logo); }
+
+        /* Navigation */
+        nav {
+            background-color: var(--bg-white);
+            width: 100%;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 40px;
+            padding: 12px 0;
+        }
+
+        .nav-item-mobile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 8px 19px;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+
+        .nav-item-mobile i {
+            font-size: 1.2rem;
+            margin-bottom: 4px;
+            color: var(--primary-color);
+        }
+
+        .nav-item-mobile:hover,
+        .nav-item-mobile.active {
+            background: var(--bg-light);
+            color: var(--primary-color);
+            box-shadow: var(--shadow-sm);
+            transform: translateY(-2px);
+        }
+
+        /* Hamburger Menu */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            z-index: 1002;
+        }
+
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: var(--text-dark);
+            transition: 0.3s;
+        }
+
+        /* ========== HERO SLIDER ========== */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .slider-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/9;
+            border-radius: 20px;
+            overflow: hidden;
+            background: var(--card-bg);
+            box-shadow: 
+                0 0 0 1px var(--border-color),
+                0 30px 60px -20px rgba(0, 0, 0, 0.5),
+                0 0 100px -30px var(--slider-accent-glow);
+        }
+
+        .slider-track {
+            display: flex;
+            height: 100%;
+            transition: transform 0.7s cubic-bezier(0.65, 0, 0.35, 1);
+        }
+
+        .slide {
+            flex: 0 0 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s cubic-bezier(0.65, 0, 0.35, 1);
+        }
+
+        .slide.active img {
+            transform: scale(1);
+        }
+
+        .slide:not(.active) img {
+            transform: scale(1.1);
+        }
+
+        .slide::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to top,
+                rgba(10, 10, 15, 0.9) 0%,
+                rgba(10, 10, 15, 0.3) 30%,
+                transparent 60%
+            );
+            pointer-events: none;
+        }
+
+        .slide-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 40px;
+            z-index: 2;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.6s cubic-bezier(0.65, 0, 0.35, 1) 0.2s;
+        }
+
+        .slide.active .slide-content {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .slide-tag {
+            display: inline-block;
+            padding: 6px 14px;
+            background: var(--slider-accent);
+            color: var(--border-color);
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 19px;
+            margin-bottom: 16px;
+        }
+
+        .slide-title {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 12px;
+            color: var(--bg-white);
+        }
+
+        .slide-desc {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+            max-width: 400px;
+            line-height: 1.6;
+        }
+
+        /* Slider Navigation Buttons */
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 56px;
+            height: 56px;
+            background: rgba(15, 15, 20, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+            color: var(--bg-white);
+        }
+
+        .nav-btn:hover {
+            background: var(--slider-accent);
+            border-color: var(--slider-accent);
+            color: var(--bg-dark);
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 0 30px var(--slider-accent-glow);
+        }
+
+        .nav-btn:active {
+            transform: translateY(-50%) scale(0.95);
+        }
+
+        .nav-btn.prev { left: 20px; }
+        .nav-btn.next { right: 20px; }
+
+        .nav-btn svg {
+            width: 24px;
+            height: 24px;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-btn:hover svg {
+            transform: translateX(2px);
+        }
+
+        .nav-btn.prev:hover svg {
+            transform: translateX(-2px);
+        }
+
+        /* Progress Bar */
+        .progress-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 4px;
+            background: var(--slider-accent);
+            z-index: 10;
+            transition: width 0.1s linear;
+        }
+
+        .counter span {
+            color: var(--slider-accent);
+        }
+
+        /* Play/Pause */
+        .play-pause {
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            width: 44px;
+            height: 44px;
+            background: rgba(15, 15, 20, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+            color: var(--bg-white);
+        }
+
+        .play-pause:hover {
+            background: var(--slider-accent);
+            border-color: var(--slider-accent);
+            color: var(--bg-dark);
+        }
+
+        .play-pause svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* Dots Navigation */
+        .dots-nav {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .dot {
+            width: 40px;
+            height: 6px;
+            background: var(--border-color);
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: none;
+        }
+
+        .dot::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 0;
+            background: var(--slider-accent);
+            border-radius: 3px;
+            transition: width 0.3s ease;
+        }
+
+        .dot:hover::after {
+            width: 30%;
+        }
+
+        .dot.active::after {
+            width: 100%;
+        }
+
+        /* Thumbnails */
+        .thumbnails {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 16px;
+            flex-wrap: wrap;
+        }
+
+        .thumb {
+            width: 80px;
+            height: 50px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            opacity: 0.5;
+            background: none;
+            padding: 0;
+        }
+
+        .thumb:hover {
+            opacity: 0.8;
+            transform: translateY(-4px);
+        }
+
+        .thumb.active {
+            border-color: var(--slider-accent);
+            opacity: 1;
+            box-shadow: 0 0 20px var(--slider-accent-glow);
+        }
+
+        .thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Hero CTA */
+        .hero-cta {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 24px;
+            flex-wrap: wrap;
+        }
+
+        /* ========== BUTTONS ========== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 36px;
+            background-color: var(--primary-color);
+            color: var(--bg-white);
+            border-radius: 50px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+            transition: var(--transition);
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(to right, #1857cc, #0033ff);
+            box-shadow: var(--shadow-md);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: linear-gradient(to right, #006eff, #03aef1);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .buy-btn {
+            background: linear-gradient(to right, #80ff00, #00a634);
+            color: white;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            padding: 14px 36px;
+            border-radius: 50px;
+            border: none;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0, 166, 52, 0.4);
+            gap: 10px;
+        }
+
+        .buy-btn:hover {
+            filter: brightness(1.1);
+            transform: translateY(-3px);
+            background: linear-gradient(to right, #00a634, #00faa7);
+            box-shadow: 0 6px 20px rgba(0, 166, 52, 0.6);
+        }
+
+        /* ========== SECTIONS ========== */
+        main {
+            overflow: hidden;
+        }
+
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.25rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header p {
+            color: var(--text-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .separator-line {
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* ========== ABOUT SECTION ========== */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: stretch;
+        }
+
+        .catalog-card {
+            background: var(--bg-white);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+            border-top: 5px solid var(--primary-color);
+            max-height: 100%;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .catalog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .catalog-card h3 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid var(--bg-light);
+            padding-bottom: 15px;
+        }
+
+        .catalog-list {
+            flex-grow: 1;
+        }
+
+        .catalog-list li {
+            padding: 12px 0;
+            border-bottom: 1px dashed var(--border-color);
+            color: var(--text-gray);
+            display: flex;
+            align-items: center;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+
+        .catalog-list li:last-child {
+            border-bottom: none;
+        }
+
+        .catalog-list li:hover {
+            color: var(--primary-color);
+            padding-left: 8px;
+            font-weight: 500;
+        }
+
+        .catalog-list li::before {
+            content: "\f054";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--accent-color);
+            display: inline-block;
+            width: 20px;
+            font-size: 0.8em;
+            margin-right: 5px;
+        }
+
+        /* ========== PRODUCTS SECTION ========== */
+        .bg-gray {
+            background-color: var(--bg-light);
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .product-card {
+            background: var(--bg-white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .card-img-wrapper {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+            background-color: #eee;
+        }
+
+        .card-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .product-card:hover img {
+            transform: scale(1.15);
+        }
+
+        .card-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-content h3 {
+            font-size: 1.25rem;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .card-content h4 {
+            font-size: 1rem;
+            color: var(--primary-color);
+            margin: 12px 0 6px;
+        }
+
+        .card-content p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* ========== CONTACT SECTION ========== */
+        .contact-wrapper {
+            background: var(--bg-white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-md);
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .contact-info-col {
+            flex: 1;
+            min-width: 320px;
+            padding: 50px;
+        }
+
+        .contact-map-col {
+            flex: 1;
+            min-width: 300px;
+            background: #eee;
+            min-height: 400px;
+            position: relative;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+
+        .icon-box {
+            background: #eff6ff;
+            color: var(--primary-color);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            margin-right: 20px;
+            flex-shrink: 0;
+            transition: var(--transition);
+        }
+
+        .contact-item:hover .icon-box {
+            background-color: var(--primary-color);
+            color: var(--bg-white);
+        }
+
+        .contact-details h4 {
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .contact-details p {
+            color: var(--text-gray);
+            margin: 0;
+        }
+
+        .contact-details a {
+            color: var(--text-gray);
+        }
+
+        .contact-details a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background-color: var(--secondary-color);
+            color: #ffffff;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 80px;
+            border-top: 5px solid var(--accent-color);
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 0.95rem;
+        }
+
+        footer strong {
+            color: var(--bg-white);
+        }
+
+        /* ========== MEDIA QUERIES ========== */
+        @media (max-width: 992px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-top {
+                padding: 10px 20px;
+            }
+
+            .brand {
+                gap: 10px;
+            }
+
+            .brand-img {
+                max-height: 40px;
+            }
+
+            .brand-logo-text {
+                font-size: 1.1rem;
+            }
+
+            .brand-tagline {
+                font-size: 0.7rem;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                height: 100vh;
+                background-color: var(--bg-white);
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+                transition: 0.4s ease;
+                z-index: 1001;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                border-top: none;
+            }
+
+            nav.active {
+                right: 0;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+            }
+
+            .nav-list {
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                gap: 20px;
+                padding: 20px;
+            }
+
+            .nav-item-mobile {
+                font-size: 1.2rem;
+            }
+
+            .hero-section {
+                padding: 10px;
+            }
+
+            .slider-wrapper {
+                aspect-ratio: 16/10;
+                border-radius: 12px;
+            }
+
+            .slide-content {
+                padding: 20px;
+            }
+
+            .nav-btn {
+                width: 44px;
+                height: 44px;
+            }
+
+            .nav-btn.prev { left: 10px; }
+            .nav-btn.next { right: 10px; }
+
+            section {
+                padding: 50px 20px;
+            }
+
+            .catalog-card {
+                padding: 25px;
+            }
+
+            .contact-info-col {
+                padding: 30px;
+                order: 2;
+            }
+
+            .contact-map-col {
+                min-height: 300px;
+                order: 1;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            .btn, .buy-btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .thumbnails {
+                display: none;
+            }
+        }
+
+        /* ========== REDUCED MOTION ========== */
+        @media (prefers-reduced-motion: reduce) {
+            .slider-track,
+            .slide img,
+            .slide-content,
+            .nav-btn,
+            .dot,
+            .thumb,
+            .reveal {
+                transition: none;
+            }
+            
+            .animate-entrance {
+                animation: none;
+                opacity: 1;
+            }
+        }
+
+        /* ========== FOCUS STATES ========== */
+        .nav-btn:focus-visible,
+        .dot:focus-visible,
+        .thumb:focus-visible,
+        .play-pause:focus-visible,
+        .btn:focus-visible,
+        .buy-btn:focus-visible {
+            outline: 2px solid var(--slider-accent);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="brand" onclick="window.scrollTo(0,0)">
+                <img src="https://files.catbox.moe/6agle1.png" alt="Logo PT Agape Olivia Sukses" class="brand-img">
+                <div class="brand-text">
+                    <div class="brand-logo-text">
+                        <span class="txt-black">PT. AGAPE OLIVIA</span> <span class="txt-red">SUKSES</span>
+                    </div>
+                    <div class="brand-tagline">Spesialis Heater Element & Sistem Pemanas Industri</div>
+                </div>
+            </div>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+
+        <nav id="navbar">
+            <div class="nav-container">
+                <ul class="nav-list" id="nav-list">
+                    <li>
+                        <a href="#about" class="nav-item-mobile">
+                            <i class="fas fa-home"></i>
+                            <span>Tentang Kami</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#products" class="nav-item-mobile">
+                            <i class="fas fa-boxes-stacked"></i>
+                            <span>Daftar Produk</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#services" class="nav-item-mobile">
+                            <i class="fas fa-fire-flame-curved"></i>
+                            <span>Produk Unggulan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="nav-item-mobile">
+                            <i class="fas fa-envelope"></i>
+                            <span>Kontak & Alamat</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Slider Section -->
+        <section class="hero-section" style="padding-top: 30px; padding-bottom: 30px;">
+            <div class="slider-wrapper animate-entrance">
+                <div class="slider-track" id="sliderTrack"></div>
+
+                <div class="progress-bar" id="progressBar"></div>
+
+                <div class="counter">
+                    <span id="currentSlide">01</span> / <span id="totalSlides">05</span>
+                </div>
+
+                <button class="play-pause" id="playPauseBtn" aria-label="Play/Pause slideshow">
+                    <svg id="pauseIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="6" y="4" width="4" height="16" rx="1"/>
+                        <rect x="14" y="4" width="4" height="16" rx="1"/>
+                    </svg>
+                    <svg id="playIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+                        <polygon points="5 3 19 12 5 21 5 3"/>
+                    </svg>
+                </button>
+
+                <button class="nav-btn prev" id="prevBtn" aria-label="Previous slide">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"/>
+                    </svg>
+                </button>
+                <button class="nav-btn next" id="nextBtn" aria-label="Next slide">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="dots-nav animate-entrance delay-1" id="dotsNav"></div>
+            <div class="thumbnails animate-entrance delay-2" id="thumbnails"></div>
+
+            <div class="hero-cta animate-entrance delay-3">
+                <a href="#contact" class="btn">Hubungi Kami</a>
+                <a href="#services" class="btn btn-secondary">Lihat Produk</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="section-header reveal">
+                <h2>Tentang Kami</h2>
+                <div class="separator-line"></div>
+                <p style="margin-top: 15px;">
+                    <strong>PT. Agape Olivia Sukses</strong> bergerak dalam penyediaan heater-heater element, mesin-mesin yang didukung oleh heater-heater element, alat-alat teknik yang berhubungan dengan heater element part.
+                </p>
+                <p>Tentu dalam menjalankan usaha ini, kami sangat berkomitmen mengedepankan mutu (kualitas) dan ketepatan waktu (on time) serta keramahan dan etika dalam melayani seluruh customer.</p>
+                <p>Selain itu, kami juga terus berbenah diri dan siap berkompetisi dengan perusahaan-perusahaan lokal baik dari segi kompetensi dan juga kepuasan pelanggan.</p>
+            </div>
+        </section>
+
+        <!-- Products Menu Section -->
+        <section id="products">
+            <div class="section-header reveal">
+                <h2>Daftar Produk</h2>
+                <div class="separator-line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="catalog-card reveal">
+                    <h3>
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        Katalog Spare Part
+                    </h3>
+                    <ul class="catalog-list">
+                        <li onclick="scrollKeProduk('Immersion Heater')">Immersion Heater</li>
+                        <li onclick="scrollKeProduk('Silicon Niritde')">Silicon Niritde</li>
+                        <li onclick="scrollKeProduk('Infrared Black Body')">Infrared Black Body</li>
+                        <li onclick="scrollKeProduk('Cartridge Heater')">Cartridge Heater</li>
+                        <li onclick="scrollKeProduk('Tubular Heater')">Tubular Heater</li>
+                        <li onclick="scrollKeProduk('Silica Quartz Heater')">Silica Quartz Heater</li>
+                        <li onclick="scrollKeProduk('Thermocouple Control')">Thermocouple Control</li>
+                        <li onclick="scrollKeProduk('Band Heater')">Band Heater</li>
+                        <li onclick="scrollKeProduk('Ceramic Heater')">Ceramic Heater</li>
+                        <li onclick="scrollKeProduk('Cast In Heater')">Cast In Heater</li>
+                        <li onclick="scrollKeProduk('Coil Heater')">Coil Heater</li>
+                        <li onclick="scrollKeProduk('Flat/Strip Heater')">Flat/Strip Heater</li>
+                        <li onclick="scrollKeProduk('Finned Heater')">Finned Heater</li>
+                    </ul>
+                </div>
+
+                <div class="catalog-card reveal">
+                    <h3>
+                        <i class="fa-solid fa-industry"></i>
+                        Katalog Mesin Industri
+                    </h3>
+                    <ul class="catalog-list">
+                        <li onclick="scrollKeProduk('Oven Circulation')">Oven Circulation</li>
+                        <li onclick="scrollKeProduk('Oven Furnice')">Oven Furnice</li>
+                        <li onclick="scrollKeProduk('Electrict Duct Heater')">Electrict Duct Heater</li>
+                        <li onclick="scrollKeProduk('Load Bank')">Load Bank</li>
+                        <li onclick="scrollKeProduk('Hot Room Instalation')">Hot Room Instalation</li>
+                        <li onclick="scrollKeProduk('Oven Conveyor')">Oven Conveyor</li>
+                        <li onclick="scrollKeProduk('Oven Boiler/Hot Tank')">Oven Boiler/Hot Tank</li>
+                        <li onclick="scrollKeProduk('Heat Exchangers')">Heat Exchangers</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services / Products Showcase -->
+        <div class="bg-gray">
+            <section id="services" style="padding-left: 0; padding-right: 0;">
+                <div class="section-header reveal" style="padding: 0 20px;">
+                    <h2>Produk Unggulan</h2>
+                    <div class="separator-line"></div>
+                </div>
+
+                <div class="product-grid">
+                    <!-- Product cards remain the same, abbreviated for space -->
+                      <!-- Card 1 -->
+          <div class="product-card reveal" id="Band Heater">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/kufa54.jpg" alt="Band Heater" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Band Heater</h3>
+              <h4>1. Industri Plastik dan Karet</h4>
+              <p>Dalam industri plastik dan karet, band heater digunakan untuk memanaskan mesin cetak atau ekstrusi. Mereka membantu mencapai suhu yang diperlukan untuk mencairkan bahan plastik atau karet sehingga bisa dicetak atau diolah.</p>
+              <h4>2. Industri Pengolahan Makanan</h4>
+              <p>Band heater dapat digunakan dalam industri pengolahan makanan untuk memanaskan tangki atau wadah yang berisi cairan atau bahan makanan. Ini membantu dalam proses pasteurisasi, pencampuran, atau pemanasan bahan-bahan dalam produksi makanan dan minuman.</p>
+              <h4>3. Industri Kimia</h4>
+              <p>Dalam industri kimia, band heater dapat digunakan untuk memanaskan tangki atau reaktor yang berisi bahan kimia. Proses reaksi kimia sering memerlukan suhu tertentu untuk berjalan dengan baik, dan band heater membantu menjaga suhu yang diinginkan.</p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="product-card reveal" id="Cartridge Heater">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/cblcmn.jpg" alt="Cartridge Heater" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Cartridge Heater</h3>
+              <h4>1. Selubung Baja Tahan Karat</h4>
+              <p>Lapisan luar pemanas kartrid biasanya terbuat dari baja tahan karat yang tahan korosi. Selubung ini memberikan kekuatan mekanis, melindungi komponen internal, dan memastikan umur panjang bahkan di lingkungan bersuhu tinggi atau korosif.</p>
+              <h4>2. Isolasi Magnesium Oksida (MgO) Kepadatan Tinggi</h4>
+              <p>Kumparan pemanas dikemas rapat dengan bubuk MgO kemurnian tinggi di dalam selubungnya. Material ini menawarkan konduktivitas termal dan isolasi listrik yang sangat baik, memungkinkan perpindahan panas yang cepat dan merata tanpa mengorbankan keselamatan.</p>
+              <h4>3. Kawat Resistansi Nikel-Kromium</h4>
+              <p>Elemen pemanas inti terbuat dari kawat NiCr, yang dipilih karena ketahanan suhunya yang tinggi dan masa pakainya yang lama. Kawat ini dililitkan di sekitar inti keramik untuk menjaga jarak antar kumparan dan mencegah korsleting.</p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="product-card reveal" id="Tubular Heater">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/zyla7r.jpg" alt="Tubular Heater" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Tubular Heater</h3>
+              <p>Tubular heater adalah jenis elemen pemanas yang dirancang dalam bentuk tabung atau silinder. Mereka biasanya terbuat dari logam resistif dan dapat digunakan dalam berbagai aplikasi pemanasan.</p>
+              <p>Berikut adalah beberapa fungsi dan kegunaan utama dari tubular heater:</p>
+              <h4>1. Pemanasan Cairan dan Gas</h4>
+              <p>Tubular heater digunakan untuk memanaskan cairan atau gas dalam berbagai aplikasi industri, seperti pemanasan dalam tangki penyimpanan, pemanasan dalam pipa, atau pemanasan dalam peralatan proses.</p>
+              <h4>2. Pemanasan Dalam Mesin Industri</h4>
+              <p>Tubular heater sering digunakan dalam berbagai peralatan industri seperti oven, pengering, peralatan pengolahan makanan, dan banyak lagi.</p>
+              <h4>3. Pemanasan Udara</h4>
+              <p>Tubular heater dapat digunakan untuk memanaskan udara sebelum didistribusikan dalam sistem pemanas udara. Ini umum dalam sistem pemanas sentral atau pemanas ruangan.</p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="product-card reveal" id="Immersion Heater">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/w67qjc.jpg" alt="Immersion Heater" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Immersion Heater</h3>
+              <h4>1. Efisiensi Pemanasan</h4>
+              <p>Immersion heater dapat menghasilkan panas dengan cepat dan efisien, sehingga memungkinkan proses pemanasan menjadi lebih efisien dan produktif.</p>
+              <h4>2. Kontrol Suhu</h4>
+              <p>Alat ini memungkinkan pengaturan suhu yang tepat, sehingga memudahkan pengendalian proses industri yang memerlukan suhu yang konstan dan terkontrol.</p>
+              <h4>3. Fleksibilitas</h4>
+              <p>Immersion heater dapat digunakan dalam berbagai jenis cairan atau gas, membuatnya sangat fleksibel dalam berbagai aplikasi industri, seperti pemanasan air, minyak, bahan kimia, dan banyak lagi.</p>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="product-card reveal" id="Cast In Heater">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/lb5mi4.jpg" alt="Cast In Heater" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Cast In Heater</h3>
+              <h4>1. Industri Plastik dan Karet</h4>
+              <p>Cast in heater sering digunakan dalam mesin injeksi plastik atau ekstruder untuk memanaskan cetakan atau silinder tempat bahan plastik atau karet dileburkan dan dicetak.</p>
+              <h4>2. Industri Kimia</h4>
+              <p>Cast in heater digunakan dalam industri kimia untuk memanaskan tangki reaksi, pipa, atau peralatan lain yang terlibat dalam proses kimia atau pemisahan.</p>
+              <h4>3. Industri Pengecoran Logam</h4>
+              <p>Dalam industri pengecoran logam, cast in heater dapat digunakan untuk memanaskan cetakan atau alat cetak untuk melelehkan logam dan menciptakan cetakan.</p>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="product-card reveal" id="Coil Heater">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/bbg69s.jpg" alt="Bobin Heater" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Bobin Heater</h3>
+              <h4>1. Desain & Material</h4>
+              <p>Terdiri dari elemen keramik tahan panas yang menopang kawat resistensi, biasanya ditempatkan dalam tabung (shell) stainless steel atau baja ringan.</p>
+              <h4>2. Aplikasi Pemanasan</h4>
+              <p>Digunakan untuk memanaskan tangki besar, tangki minyak bakar berat, cairan kimia, dan udara di dalam sistem.</p>
+              <h4>3. Pemasangan</h4>
+              <p>Umumnya dipasang secara horizontal, tetapi bisa didesain untuk instalasi vertikal.</p>
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="product-card reveal" id="Ceramic Infra Red Heater">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/1mazhv.jpg" alt="Ceramic Infra Red Heater" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Ceramic Infra Red Heater</h3>
+              <h4>1. Fungsi Pemanasan</h4>
+              <p>Pemanas Keramik Radiant umumnya dimanfaatkan untuk memanaskan sifat benda yang permukaannya padat diantaranya untuk memanaskan: drying, baking, kain, plastik, makanan, ruangan, metal, cat, dll.</p>
+              <h4>2. Proses Pemanasan</h4>
+              <p>Infrared Ceramic juga dapat dipasang dalam baris atau bank, terowongan atau konfigurasi oven bagian untuk mencapai intens panas terkonsentrasi dalam aplikasi seperti pengeringan buah atau cat.</p>
+              <h4>3. Infrared Ceramic Heater</h4>
+              <p>Pemanas infra merah keramik yang dirancang untuk suhu operasi sampai 750° C dan menghasilkan permukaan panas hingga 64 kW/m².</p>
+            </div>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="product-card reveal" id="Thermocouple Control">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/fibemg.jpg" alt="Thermocouple Control" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Thermocouple Control</h3>
+              <h4>1. Fungsi Utama</h4>
+              <p>Memantau, mengukur, dan mengendalikan suhu secara real-time dalam proses industri, mulai dari suhu sangat rendah hingga tinggi (2000°C).</p>
+              <h4>2. Cara Kerja</h4>
+              <p>Sensor mendeteksi suhu, sinyal listrik kecil (milivolt) dikirim ke kontroler, kontroler membandingkan dengan setpoint, kontroler mengaktifkan/mematikan pemanas/pendingin.</p>
+              <h4>3. Keamanan (Safety)</h4>
+              <p>Berfungsi sebagai pengaman (contoh: flame failure device pada kompor gas) yang menutup aliran gas otomatis jika terdeteksi suhu tidak normal atau api padam.</p>
+            </div>
+          </div>
+
+          <!-- Card 9 -->
+          <div class="product-card reveal" id="Infrared Black Body">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/195jkz.jpg" alt="Infrared Black Body" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Infrared Black Body</h3>
+              <h4>1. Fungsi</h4>
+              <p>Menjana haba inframerah jauh untuk pemanasan ruang atau terapi haba.</p>
+              <h4>2. Aplikasi</h4>
+              <p>Digunakan dalam pemanas sauna, industri, dan peranti pemanasan rumah.</p>
+              <h4>3. Bahan</h4>
+              <p>Diperbuat daripada bahan seramik berkualiti tinggi atau kuarza dengan dawai nikel-kromium di dalamnya.</p>
+            </div>
+          </div>
+
+          <!-- Card 10 -->
+          <div class="product-card reveal" id="Silicon Niritde">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/z3l4qp.jpg" alt="Silicon Nitride" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Silicon Nitride</h3>
+              <h4>1. Sifat Mekanik & Termal</h4>
+              <p>Sangat keras, memiliki kekuatan lentur tinggi, ketangguhan patah yang tinggi, dan koefisien ekspansi termal rendah.</p>
+              <h4>2. Ketahanan Kimia</h4>
+              <p>Umumnya inert secara kimiawi, namun dapat diserang oleh asam fluorida (HF) encer dan asam sulfat panas.</p>
+              <h4>3. Elektronik</h4>
+              <p>Substrat khusus, lapisan pasivasi dalam fabrikasi semikonduktor, dan sirkuit terintegrasi fotonik.</p>
+            </div>
+          </div>
+
+          <!-- Card 11 -->
+          <div class="product-card reveal" id="Flat/Strip Heater">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/356ja8.jpg" alt="Plat/Strip Heater" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Plat/Strip Heater</h3>
+              <h4>1. Penggunaan</h4>
+              <p>Sering ditempelkan pada die, moulds, atau tangki untuk menjaga suhu, serta digunakan dalam industri percetakan dan pengemasan.</p>
+              <h4>2. Desain</h4>
+              <p>Umumnya terbuat dari plat logam (seperti aluminium atau besi) yang membungkus elemen resistansi.</p>
+              <h4>3. Keunggulan</h4>
+              <p>Presisi, efisien dalam perpindahan panas, dan hemat energi.</p>
+            </div>
+          </div>
+
+          <!-- Card 12 -->
+          <div class="product-card reveal" id="Manifold Heater">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/cvfart.jpg" alt="Manifold Heater" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Manifold Heater</h3>
+              <h4>1. Aplikasi Industri</h4>
+              <p>Manifold heater menjaga suhu material plastik tetap ideal dalam sistem hot runner agar aliran plastik lancar.</p>
+              <h4>2. Jenis-jenis</h4>
+              <p>Biasanya berbentuk pemanas tubular fleksibel, pemanas stainless steel, atau pemanas logam dikepang.</p>
+              <h4>3. Efisiensi</h4>
+              <p>Alat ini meminimalkan limbah bahan dengan mencegah pembekuan plastik di saluran manifold.</p>
+            </div>
+          </div>
+
+          <!-- Card 13 -->
+          <div class="product-card reveal" id="Oven Traksi Motor">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/ru6ofl.jpg" alt="Oven Traksi Motor" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Oven Traksi Motor</h3>
+              <h4>1. Kipas Sirkulasi</h4>
+              <p>Kipas aliran aksial sering digunakan untuk meratakan udara panas.</p>
+              <h4>2. Suhu Seragam</h4>
+              <p>Sering digunakan di industri untuk pengeringan farmasi, bahan kimia, atau makanan.</p>
+              <h4>3. Fitur Spesifik</h4>
+              <p>Oven ini dirancang dengan kontrol suhu presisi tinggi, sirkulasi udara paksa, dan sering kali dilengkapi sistem ventilasi.</p>
+            </div>
+          </div>
+
+          <!-- Card 14 -->
+          <div class="product-card reveal" id="Ceramic Furnice">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/2bs0vd.jpg" alt="Ceramic Furnice" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Ceramic Furnice</h3>
+              <h4>1. Material</h4>
+              <p>Menggunakan serat keramik ringan untuk isolasi efisien, membuat pemanasan lebih cepat dan hemat energi.</p>
+              <h4>2. Aplikasi</h4>
+              <p>Digunakan untuk analisis gravimetrik, penentuan kadar abu, sintering material keramik, dan uji material di laboratorium.</p>
+              <h4>3. Konstruksi</h4>
+              <p>Umumnya berbentuk box-type atau top door, elemen pemanas tidak bersentuhan langsung dengan sampel.</p>
+            </div>
+          </div>
+
+          <!-- Card 15 -->
+          <div class="product-card reveal" id="Carbottom Furnice">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/0lm0tq.jpg" alt="Carbottom Furnice" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Carbottom Furnice</h3>
+              <h4>1. Desain Bogie Hearth</h4>
+              <p>Lantai tungku dipasang di atas kereta beroda yang dapat ditarik keluar dari ruang pemanas.</p>
+              <h4>2. Penggunaan Industri</h4>
+              <p>Efisien untuk menangani komponen logam raksasa (cetakan, coran, bejana tekan) yang sulit dimuat ke dalam tungku batch biasa.</p>
+              <h4>3. Suhu</h4>
+              <p>Mampu mencapai suhu tinggi, sering digunakan hingga atau lebih tergantung kebutuhan proses.</p>
+            </div>
+          </div>
+
+          <!-- Card 16 -->
+          <div class="product-card reveal" id="Load Bank">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/6vhcib.jpg" alt="Load Bank" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Load Bank</h3>
+              <h4>1. Fungsi Utama</h4>
+              <p>Digunakan untuk commissioning (uji terima), pemeliharaan berkala, uji performa, dan pengujian beban penuh (load test) pada genset/sumber energi.</p>
+              <h4>2. Cara Kerja</h4>
+              <p>Menciptakan beban buatan (resistif/reaktif) untuk membebani sumber daya dan menghilangkan energi listrik yang dihasilkan.</p>
+            </div>
+          </div>
+
+          <!-- Card 17 -->
+          <div class="product-card reveal" id="Ceramic Heater">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/qqj2ko.jpg" alt="Ceramic Heater" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Ceramic Heater</h3>
+              <h4>1. Pemanasan Cepat</h4>
+              <p>Keramik menyerap dan melepaskan panas dengan cepat.</p>
+              <h4>2. Aman dan Tahan Lama</h4>
+              <p>Tidak mudah menua, tidak mudah terbakar (karena self-regulating pada tipe PTC), dan tahan korosi.</p>
+              <h4>3. Efisien</h4>
+              <p>Menghasilkan panas langsung tanpa perlu waktu lama, seringkali lebih hemat energi dibandingkan pemanas konvensional.</p>
+            </div>
+          </div>
+
+          <!-- Card 18 -->
+          <div class="product-card reveal" id="Silicone Carbide">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/r9vp52.jpg" alt="Silicone Carbide" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Silicone Carbide</h3>
+              <h4>1. Ketahanan Suhu</h4>
+              <p>Mampu beroperasi pada suhu dan tegangan tinggi, membuatnya unggul sebagai komponen elektronik/semikonduktor.</p>
+              <h4>2. Aplikasi Industri</h4>
+              <p>Digunakan untuk rem mobil, kopling, pelat anti peluru, dan sandblasting.</p>
+              <h4>3. Jenis</h4>
+              <p>Terdapat varian hitam (lebih keras) dan hijau, umum digunakan dalam pemrosesan kaca, keramik, dan besi tuang.</p>
+            </div>
+          </div>
+
+          <!-- Card 19 -->
+          <div class="product-card reveal" id="Oven Conveyor">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/fv2w3e.jpg" alt="Oven Conveyor" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Oven Conveyor</h3>
+              <h4>1. Fungsi Utama</h4>
+              <p>Memanggang, mengeringkan, atau memanaskan material secara berkelanjutan tanpa perlu memasukkan/mengeluarkan produk satu per satu.</p>
+              <h4>2. Keunggulan</h4>
+              <p>Efisiensi tinggi, konsistensi hasil (matang merata), dan cocok untuk produksi volume besar.</p>
+              <h4>3. Jenis</h4>
+              <p>Terdapat jenis gas dan listrik, dengan suhu yang dapat disesuaikan untuk berbagai aplikasi industri.</p>
+            </div>
+          </div>
+
+          <!-- Card 20 -->
+          <div class="product-card reveal" id="Oven Furnice">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/kyth5q.jpg" alt="Oven Furnice" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Oven Furnice</h3>
+              <h4>1. Fungsi Utama</h4>
+              <p>Digunakan untuk melebur logam (smelting), pengerasan logam (hardening), sintering, serta penentuan kadar abu di laboratorium.</p>
+              <h4>2. Sumber Energi</h4>
+              <p>Umumnya menggunakan gas alam, bahan bakar cair, batu bara, atau listrik (tungku busur/induksi).</p>
+              <h4>3. Jenis-jenis</h4>
+              <p>Umumnya meliputi box furnace, muffle furnace (menyekat bahan dari produk pembakaran), dan tube furnace.</p>
+            </div>
+          </div>
+
+          <!-- Card 21 -->
+          <div class="product-card reveal" id="Holding Furnice">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/7iz7u1.jpg" alt="Holding Furnice" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Holding Furnice</h3>
+              <h4>1. Fungsi Utama</h4>
+              <p>Menahan suhu logam cair tetap stabil, bukan melebur bahan padat, sehingga efisien energi.</p>
+              <h4>2. Keunggulan</h4>
+              <p>Kontrol suhu akurat, mengurangi turbulensi (menjaga logam tetap bersih), dan umur operasional yang panjang.</p>
+              <h4>3. Komponen</h4>
+              <p>Seringkali dilengkapi dengan sistem degassing untuk menghilangkan gas dalam logam cair.</p>
+            </div>
+          </div>
+
+          <!-- Card 22 -->
+          <div class="product-card reveal" id="Heat Exchangers">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/f13quz.jpg" alt="Heat Exchangers" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Heat Exchangers</h3>
+              <h4>1. Shell and Tube</h4>
+              <p>Terdiri dari kumpulan pipa (tube) di dalam sebuah tabung besar. Banyak digunakan di pembangkit listrik dan pengolahan limbah.</p>
+              <h4>2. Plate and Frame</h4>
+              <p>Menggunakan pelat-pelat tipis untuk mentransfer panas, sangat efisien untuk perpindahan panas yang cepat.</p>
+              <h4>3. Double Pipe</h4>
+              <p>Tipe paling sederhana dengan dua pipa paralel bersarang; satu untuk fluida panas dan satu untuk fluida dingin.</p>
+            </div>
+          </div>
+
+          <!-- Card 23 -->
+          <div class="product-card reveal" id="Tank Heater">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/j2iqme.jpg" alt="Tank Heater" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Tank Heater</h3>
+              <h4>1. Fungsi Utama</h4>
+              <p>Perangkat pemanas yang dirancang khusus untuk memanaskan atau menjaga suhu fluida (cair atau gas) yang disimpan di dalam sebuah tangki penampung.</p>
+              <h4>2. Menjaga Viskositas</h4>
+              <p>Memastikan cairan kental (seperti aspal atau minyak berat) tetap encer agar mudah dipompa.</p>
+              <h4>3. Mencegah Pembekuan</h4>
+              <p>Melindungi isi tangki agar tidak membeku pada cuaca ekstrem atau suhu rendah.</p>
+            </div>
+          </div>
+
+          <!-- Card 24 -->
+          <div class="product-card reveal" id="Cable Heater">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/7p3wfe.jpg" alt="Cable Heater" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Cable Heater</h3>
+              <h4>1. Ketahanan Panas Tinggi</h4>
+              <p>Isolasi terbuat dari material seperti fiberglass dengan lapisan mika.</p>
+              <h4>2. Fungsi</h4>
+              <p>Sering digunakan dalam industri logam (baja), mesin cetak, serta aplikasi pemanasan yang membutuhkan fleksibilitas tinggi.</p>
+              <h4>3. Material Konduktor</h4>
+              <p>Umumnya menggunakan tembaga lapis nikel atau nikel murni untuk menahan suhu tinggi.</p>
+            </div>
+          </div>
+
+          <!-- Card 25 -->
+          <div class="product-card reveal" id="Oven Circulation">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/06thv3.jpg" alt="Oven Circulation" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Oven Circulation</h3>
+              <h4>1. Prinsip Kerja</h4>
+              <p>Kipas mengalirkan udara panas yang dihasilkan elemen pemanas (listrik atau uap) ke seluruh ruang kerja, menciptakan suhu yang konsisten di seluruh bagian.</p>
+              <h4>2. Kelebihan</h4>
+              <p>Menggunakan pelat-pelat tipis untuk mentransfer panas, sangat efisien untuk perpindahan panas yang cepat.</p>
+              <h4>3. Komponen</h4>
+              <p>Dilengkapi sistem kontrol otomatis, kipas aliran aksial, dan struktur pemanas yang kokoh.</p>
+            </div>
+          </div>
+
+          <!-- Card 26 -->
+          <div class="product-card reveal" id="Oven Boiler/Hot Tank">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/5wsr3p.jpg" alt="Oven Boiler/Hot Tank" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Oven Boiler/Hot Tank</h3>
+              <h4>1. Elemen Pemanas (Heating Element)</h4>
+              <p>Pemanas elektrik atau penukar panas (uap/glikol) untuk menaikkan suhu air.</p>
+              <h4>2. Sistem Sirkulasi (Pump)</h4>
+              <p>Memompa air panas ke jaringan pipa produksi atau pemanas ruangan.</p>
+              <h4>3. Tangki Ekspansi (Expansion Tank)</h4>
+              <p>Mencegah air mendidih berlebihan dan mengelola tekanan.</p>
+            </div>
+          </div>
+
+          <!-- Card 27 -->
+          <div class="product-card reveal" id="Silica Quartz Heater">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/ephiwu.jpg" alt="Silica Quartz Heater" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Silica Quartz Heater</h3>
+              <h4>1. Fungsi Utama</h4>
+              <p>Digunakan untuk memanaskan air, larutan kimia, cairan industri, dan beberapa aplikasi packing atau pengeringan.</p>
+              <h4>2. Jenis</h4>
+              <p>Umumnya tersedia dalam tipe celup (bahan kaca kuarsa atau titanium) dan tipe tabung untuk pemanasan inframerah.</p>
+              <h4>3. Material</h4>
+              <p>Terdiri dari elemen pemanas (kawat) yang dibungkus tabung kaca silika/kuarsa berkualitas tinggi, membuatnya tahan terhadap kejutan termal.</p>
+            </div>
+          </div>
+
+          <!-- Card 28 -->
+          <div class="product-card reveal" id="Cable Thermocouple">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/k0kcrr.jpg" alt="Cable Thermocouple" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Cable Thermocouple</h3>
+              <h4>1. Pengukur Suhu</h4>
+              <p>Mentransmisikan sinyal Seebeck effect dari titik panas (hot junction) ke alat pembaca suhu (cold junction).</p>
+              <h4>2. Akurasi</h4>
+              <p>Mencegah gangguan atau distorsi sinyal (noise) agar data suhu yang dikirimkan tepat.</p>
+              <h4>3. Aplikasi Industri</h4>
+              <p>Digunakan luas dalam industri manufaktur, otomotif, kedirgantaraan, dan pemrosesan makanan.</p>
+            </div>
+          </div>
+
+          <!-- Card 29 -->
+          <div class="product-card reveal" id="Hot Runner/coil Heater">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/bntfg4.jpg" alt="Hot Runner/coil Heater" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Hot Runner/coil Heater</h3>
+              <h4>1. Fungsi Utama</h4>
+              <p>Mencegah plastik membeku di dalam saluran runner (memastikan suhu tetap cair), mengurangi limbah, dan mempercepat waktu siklus produksi.</p>
+              <h4>2. Karakteristik</h4>
+              <p>Fleksibel, tahan lama, berdensitas tinggi, dan mampu mentransfer panas secara efisien.</p>
+              <h4>3. Fitur Tambahan</h4>
+              <p>Seringkali dilengkapi dengan termokopel (Tipe J atau K) terintegrasi untuk kontrol suhu yang lebih presisi.</p>
+            </div>
+          </div>
+
+          <!-- Card 30 -->
+          <div class="product-card reveal" id="Electrict Duct Heater">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/tzz7qs.jpg" alt="Electrict Duct Heater" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Electrict Duct Heater</h3>
+              <h4>1. Cara Kerja</h4>
+              <p>Udara dingin yang melewati ducting dipanaskan oleh elemen pemanas sebelum didistribusikan ke dalam ruangan.</p>
+              <h4>2. Keunggulan</h4>
+              <p>Membantu menjaga stabilitas suhu ruangan, efisien, dan mempermudah pengaturan suhu melalui termostat atau sistem otomatisasi.</p>
+              <h4>3. Komponen & Material</h4>
+              <p>Dirancang dengan elemen pemanas listrik dan material stainless steel agar aman dan tahan lama.</p>
+            </div>
+          </div>
+        </div>
+         <!-- Card 31 -->
+          <div class="product-card reveal" id="Finned Heater">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/vpp8si.jpg" alt="Finned Heater" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Finned Heater</h3>
+              <h4>1. Aplikasi Industri</h4>
+              <p> Ideal untuk drying oven, load bank (penguji beban listrik), ducting heater, dan pemanasan ruangan.</p>
+              <h4>2. Ketahanan</h4>
+              <p>Konstruksi kokoh menggunakan stainless steel atau material paduan lainnya, membuatnya tahan lama dan aman digunakan.</p>
+              <h4>3.  Efisiensi</h4>
+              <p> Sirip-sirip (biasanya baja atau stainless steel) meningkatkan luas permukaan, memungkinkan perpindahan panas yang lebih cepat dan merata ke udara.</p>
+            </div>
+          </div>
+        </div>
+            </section>
+        </div>
+
+        <!-- Contact Section -->
+        <section id="contact" class="reveal">
+            <div class="section-header">
+                <h2>Hubungi Kami</h2>
+                <div class="separator-line"></div>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact-info-col">
+                    <div class="contact-item">
+                        <div class="icon-box">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p><a href="mailto:agape.oliviasukses@gmail.com">agape.oliviasukses@gmail.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="icon-box">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Telepon / WhatsApp</h4>
+                            <p>
+                                <a href="tel:+2182582836">+62-21 8258 2836</a><br>
+                                <a href="tel:+62811186676">+62-8111 8 6676</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="icon-box">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Alamat Kantor</h4>
+                            <p>Perum. Mayang Pratama Blok E10 No.23, Kel. Mustikasari, Kec. Mustika Jaya, Kota Bks, Jawa Barat 17157</p>
+                        </div>
+                    </div>
+
+                    <div class="button-group">
+                        <a class="btn btn-secondary" href="mailto:agape.oliviasukses@gmail.com">
+                            <i class="fa-solid fa-paper-plane" style="margin-right:8px"></i>
+                            Kirim Email
+                        </a>
+                        <button class="buy-btn" onclick="kirimWhatsApp()">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            Kirim WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <div class="contact-map-col">
+                    <div class="map-container">
+                        <iframe
+                            src="https://maps.google.com/maps?q=Perumahan%20Mayang%20Pratama%20Blok%20E10%20No.23,%20Mustikasari,%20Kec.%20Mustika%20Jaya,%20Kota%20Bekasi,%20Jawa%20Barat&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            title="Lokasi PT. Agape Olivia Sukses">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 <strong>PT Agape Olivia Sukses</strong>. All rights reserved.</p>
+        <p>Spesialis Heater Element & Sistem Pemanas Industri</p>
+    </footer>
+
+    <script>
+        // ========== SLIDER DATA ==========
+        const slides = [
+            {
+                image: 'https://files.catbox.moe/czotzj.jpg',
+                tag: 'Heater Industri',
+                title: 'Solusi Pemanas Terpercaya',
+                desc: 'Kami menyediakan kualitas heater element terbaik untuk mendukung efisiensi dan kehandalan produksi manufaktur Anda.'
+            },
+            {
+                image: 'https://files.catbox.moe/kufa54.jpg',
+                tag: 'Band Heater',
+                title: 'Band Heater Berkualitas',
+                desc: 'Digunakan dalam industri plastik, karet, pengolahan makanan, dan industri kimia untuk pemanasan yang efisien.'
+            },
+            {
+                image: 'https://files.catbox.moe/cblcmn.jpg',
+                tag: 'Cartridge Heater',
+                title: 'Cartridge Heater Presisi',
+                desc: 'Elemen pemanas dengan selubung baja tahan karat dan isolasi MgO kepadatan tinggi untuk performa optimal.'
+            },
+            {
+                image: 'https://files.catbox.moe/w67qjc.jpg',
+                tag: 'Immersion Heater',
+                title: 'Immersion Heater Efisien',
+                desc: 'Pemanas celup dengan kontrol suhu tepat dan fleksibilitas tinggi untuk berbagai aplikasi industri.'
+            },
+            {
+                image: 'https://files.catbox.moe/zyla7r.jpg',
+                tag: 'Tubular Heater',
+                title: 'Tubular Heater Serbaguna',
+                desc: 'Elemen pemanas tabung untuk pemanasan cairan, gas, dan udara dalam berbagai aplikasi industri.'
+            }
+        ];
+
+        // ========== SLIDER STATE ==========
+        let currentIndex = 0;
+        let isPlaying = true;
+        let progressInterval = null;
+        let progress = 0;
+        const SLIDE_DURATION = 5000;
+
+        // ========== SLIDER ELEMENTS ==========
+        let sliderTrack = null;
+        let dotsNav = null;
+        let thumbnails = null;
+        let progressBar = null;
+        let currentSlideEl = null;
+        let totalSlidesEl = null;
+        let playPauseBtn = null;
+        let playIcon = null;
+        let pauseIcon = null;
+        let prevBtn = null;
+        let nextBtn = null;
+
+        // ========== SLIDER FUNCTIONS ==========
+        function initSlider() {
+            sliderTrack = document.getElementById('sliderTrack');
+            dotsNav = document.getElementById('dotsNav');
+            thumbnails = document.getElementById('thumbnails');
+            progressBar = document.getElementById('progressBar');
+            currentSlideEl = document.getElementById('currentSlide');
+            totalSlidesEl = document.getElementById('totalSlides');
+            playPauseBtn = document.getElementById('playPauseBtn');
+            playIcon = document.getElementById('playIcon');
+            pauseIcon = document.getElementById('pauseIcon');
+            prevBtn = document.getElementById('prevBtn');
+            nextBtn = document.getElementById('nextBtn');
+
+            if (!sliderTrack) return;
+
+            slides.forEach((slide, index) => {
+                const slideEl = document.createElement('div');
+                slideEl.className = `slide ${index === 0 ? 'active' : ''}`;
+                slideEl.innerHTML = `
+                    <img src="${slide.image}" alt="${slide.title}" loading="${index === 0 ? 'eager' : 'lazy'}">
+                    <div class="slide-content">
+                        <span class="slide-tag">${slide.tag}</span>
+                        <h2 class="slide-title font-display">${slide.title}</h2>
+                        <p class="slide-desc">${slide.desc}</p>
+                    </div>
+                `;
+                sliderTrack.appendChild(slideEl);
+
+                const dot = document.createElement('button');
+                dot.className = `dot ${index === 0 ? 'active' : ''}`;
+                dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
+                dot.addEventListener('click', () => goToSlide(index));
+                dotsNav.appendChild(dot);
+
+                const thumb = document.createElement('button');
+                thumb.className = `thumb ${index === 0 ? 'active' : ''}`;
+                thumb.setAttribute('aria-label', `Go to slide ${index + 1}`);
+                thumb.innerHTML = `<img src="${slide.image}" alt="${slide.title}">`;
+                thumb.addEventListener('click', () => goToSlide(index));
+                thumbnails.appendChild(thumb);
+            });
+
+            totalSlidesEl.textContent = String(slides.length).padStart(2, '0');
+            startAutoPlay();
+
+            prevBtn.addEventListener('click', prevSlide);
+            nextBtn.addEventListener('click', nextSlide);
+            playPauseBtn.addEventListener('click', togglePlayPause);
+
+            document.addEventListener('keydown', handleKeyboard);
+
+            const sliderWrapper = document.querySelector('.slider-wrapper');
+            if (sliderWrapper) {
+                sliderWrapper.addEventListener('mouseenter', pauseAutoPlay);
+                sliderWrapper.addEventListener('mouseleave', resumeAutoPlay);
+            }
+        }
+
+        function goToSlide(index) {
+            currentIndex = index;
+            updateSlider();
+            resetProgress();
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateSlider();
+            resetProgress();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateSlider();
+            resetProgress();
+        }
+
+        function updateSlider() {
+            if (!sliderTrack) return;
+            
+            sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+            document.querySelectorAll('.slide').forEach((slide, i) => {
+                slide.classList.toggle('active', i === currentIndex);
+            });
+
+            document.querySelectorAll('.dot').forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentIndex);
+            });
+
+            document.querySelectorAll('.thumb').forEach((thumb, i) => {
+                thumb.classList.toggle('active', i === currentIndex);
+            });
+
+            if (currentSlideEl) {
+                currentSlideEl.textContent = String(currentIndex + 1).padStart(2, '0');
+            }
+        }
+
+        function startAutoPlay() {
+            if (!isPlaying) return;
+            progress = 0;
+            progressInterval = setInterval(() => {
+                progress += 100 / (SLIDE_DURATION / 50);
+                if (progressBar) {
+                    progressBar.style.width = `${Math.min(progress, 100)}%`;
+                }
+                if (progress >= 100) {
+                    nextSlide();
+                }
+            }, 50);
+        }
+
+        function resetProgress() {
+            progress = 0;
+            if (progressBar) {
+                progressBar.style.width = '0%';
+            }
+            if (isPlaying) {
+                clearInterval(progressInterval);
+                startAutoPlay();
+            }
+        }
+
+        function pauseAutoPlay() {
+            clearInterval(progressInterval);
+        }
+
+        function resumeAutoPlay() {
+            if (isPlaying) {
+                startAutoPlay();
+            }
+        }
+
+        function togglePlayPause() {
+            isPlaying = !isPlaying;
+            if (isPlaying) {
+                if (playIcon) playIcon.style.display = 'none';
+                if (pauseIcon) pauseIcon.style.display = 'block';
+                startAutoPlay();
+            } else {
+                if (playIcon) playIcon.style.display = 'block';
+                if (pauseIcon) pauseIcon.style.display = 'none';
+                pauseAutoPlay();
+            }
+        }
+
+        function handleKeyboard(e) {
+            switch(e.key) {
+                case 'ArrowLeft':
+                    prevSlide();
+                    break;
+                case 'ArrowRight':
+                    nextSlide();
+                    break;
+                case ' ':
+                    e.preventDefault();
+                    togglePlayPause();
+                    break;
+            }
+        }
+
+        // ========== MOBILE MENU ==========
+        function initMobileMenu() {
+            const menuToggle = document.getElementById('mobile-menu');
+            const nav = document.getElementById('navbar');
+
+            if (menuToggle && nav) {
+                menuToggle.addEventListener('click', () => {
+                    nav.classList.toggle('active');
+                    const bars = menuToggle.querySelectorAll('.bar');
+                    if (nav.classList.contains('active')) {
+                        bars[0].style.transform = 'rotate(-45deg) translate(-5px, 6px)';
+                        bars[1].style.opacity = '0';
+                        bars[2].style.transform = 'rotate(45deg) translate(-5px, -6px)';
+                    } else {
+                        bars[0].style.transform = 'none';
+                        bars[1].style.opacity = '1';
+                        bars[2].style.transform = 'none';
+                    }
+                });
+
+                nav.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        nav.classList.remove('active');
+                        const bars = menuToggle.querySelectorAll('.bar');
+                        bars[0].style.transform = 'none';
+                        bars[1].style.opacity = '1';
+                        bars[2].style.transform = 'none';
+                    });
+                });
+            }
+        }
+
+        // ========== SCROLL REVEAL ==========
+        function initScrollReveal() {
+            const observerOptions = { threshold: 0.15 };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        }
+
+        // ========== WHATSAPP ==========
+        function kirimWhatsApp() {
+            const nomorWA = "62811186676";
+            const pesan = "Halo PT Agape Olivia Sukses, saya ingin bertanya mengenai produk heater industri Anda.";
+            window.open(`https://wa.me/${nomorWA}?text=${encodeURIComponent(pesan)}`, '_blank');
+        }
+
+        // ========== SCROLL TO PRODUCT ==========
+        function scrollKeProduk(idProduk) {
+            const element = document.getElementById(idProduk);
+            if (element) {
+                element.scrollIntoView({ behavior: "smooth", block: "center" });
+            }
+        }
+
+        // ========== INITIALIZE ==========
+        document.addEventListener('DOMContentLoaded', () => {
+            initSlider();
+            initMobileMenu();
+            initScrollReveal();
+        });
+    </script>
+</body>
+
+</html>
